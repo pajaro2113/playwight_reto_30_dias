@@ -1,1 +1,7 @@
-hola mundo
+hacer commit:
+se clona el proyecto
+se abre en el ID el projecto clonado
+-git status
+-git add .
+-git commit -m "Corrige error en el formulario de login"
+-git push origin main
