@@ -5,3 +5,10 @@ se abre en el ID el projecto clonado
 -git add .
 -git commit -m "Corrige error en el formulario de login"
 -git push origin main
+
+estrutura de un test
+import {test} from '@playwright/test'
+
+test ('login sauce demo', async({page}) =>{
+    
+})
