@@ -8,3 +8,5 @@ test('login sauce demo', async ({ page }) => {
     
     //await page.pause()
 })
+
+//mostrando listas o listados usando sesiones
