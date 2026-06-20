@@ -19,6 +19,25 @@ test('obtaining lists from the page https://the-internet.herokuapp.com/', async 
     console.log(name_list)
 })
 
+test('get list of test automatization', async ({ page }) => {
+    await page.goto('http://uitestingplayground.com/')
+    await expect(page.getByRole('heading', {name:'UITAP'}))
+    
+    const columnas = page.getByRole('heading').getByRole('link')
+    const namecolumn: String[] = []
+    const conteoColumnas = await columnas.count()
+    console.log('El numero de productos son: ',conteoColumnas)
+    for (let i=0; i<conteoColumnas; i++){
+        const cell = columnas.nth(i)
+        const namecell = await cell.textContent()
+        if(namecell){
+            namecolumn.push(namecell)
+        }
+    }
+    console.log(namecolumn)
+    console.log(namecolumn.sort())//ordena arreglo alfabeticamente
+})
+
 test('login sauce demo', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/')
     await page.getByRole('textbox', {name:'Username'}).fill('standard_user')
