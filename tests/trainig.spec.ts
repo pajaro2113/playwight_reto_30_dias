@@ -38,6 +38,15 @@ test('get list of test automatization', async ({ page }) => {
     console.log(namecolumn.sort())//ordena arreglo alfabeticamente
 })
 
+
+test('get list of playground page',async ({ page }) => {
+    await page.goto('https://play1.automationcamp.ir/')
+    const existe = await page.getByText('The Playground').isVisible();
+    //if(existe){console.log('existe', existe)}else{console.log('no existe')}
+    await page.getByRole('link', { name: 'View Page'}).click()
+    //const box = page.getByRole('generic').locator('xpath=//div[contains(@class, 'card-header')]')
+})
+
 test('login sauce demo', async ({ page }) => {
     await page.goto('https://www.saucedemo.com/')
     await page.getByRole('textbox', {name:'Username'}).fill('standard_user')

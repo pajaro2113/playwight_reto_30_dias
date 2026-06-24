@@ -76,7 +76,7 @@ test('get all Amount in Record Found in the seccion Claim', async ({ page }) => 
         }
         const cambio_de_tipo = parseFloat(monto?.replace(/,/g, '').trim()) //transforma de texto a numero
         if(!Number.isNaN(cambio_de_tipo)){
-            montos.push(cambio_de_tipo) //gusada los datos en el arreglo
+            montos.push(cambio_de_tipo) //guarda los datos en el arreglo
         }
     }
     //console.log(montos.sort()) //imprime el arreglo ordenado

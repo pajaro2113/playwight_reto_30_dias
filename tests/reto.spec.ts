@@ -8,3 +8,5 @@ test('login to hrm', async ({ page }) => {
     await expect(page.getByRole('link', {name:'Admin'})).toBeVisible()
 
 })
+
+
